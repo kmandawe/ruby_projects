@@ -5,15 +5,14 @@ gemfile true do
   gem 'bcrypt'
 end
 
-
 require 'bcrypt'
 
 users = [
-  { username: "kenneth", password: "password1"},
-  { username: "jack", password: "password2"},
-  { username: "arya", password: "password3"},
-  { username: "jonshow", password: "password4"},
-  { username: "heisenberg", password: "password5"}
+  { username: "kenneth", password: "password1" },
+  { username: "jack", password: "password2" },
+  { username: "arya", password: "password3" },
+  { username: "jonshow", password: "password4" },
+  { username: "heisenberg", password: "password5" }
 ]
 
 def create_hash_digest(password)
