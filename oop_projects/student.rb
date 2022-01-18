@@ -1,5 +1,7 @@
-class Student
+require_relative '../crud'
 
+class Student
+  include Crud
   attr_accessor :first_name, :last_name, :email, :username, :password
   attr_reader :username
 
@@ -35,9 +37,6 @@ end
 mashrur = Student.new("Mashrur", "Hossain", "mashrur1", "mashrur1@example.com", "password1")
 john = Student.new("John", "Doe", "john1", "john1@example.com", "password2")
 
-puts mashrur
-puts john
+hashed_password = mashrur.create_hash_digest(mashrur.password)
 
-mashrur.last_name = john.last_name
-puts "Mashrur is altered"
-puts mashrur
+p hashed_password
